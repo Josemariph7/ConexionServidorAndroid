@@ -1,6 +1,7 @@
 package com.example.ejemploconexionservidor;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -42,7 +43,7 @@ public class Inicio extends Activity {
                 parametros.add("contrasena");
                 parametros.add(pass.getText().toString());
 
-                new PostDataTask(parametros).execute("http://192.168.240.160/ejemplo/login.php");
+                new PostDataTask(parametros).execute("http://192.168.56.1/ejemplo/login.php");
             }
         });
     }
@@ -102,9 +103,12 @@ public class Inicio extends Activity {
                     int userId = userData.optInt("ID_USUARIO", -1);
                     String userName = userData.optString("USER", "No proporcionado");
                     if (userId > 0) {
-                        String info = "ID: " + userId + "\nUsuario: " + userName;
-                        Toast.makeText(Inicio.this, "Usuario correcto" , Toast.LENGTH_LONG).show();
-                        Toast.makeText(Inicio.this,  info, Toast.LENGTH_LONG).show();
+                        // Usuario correcto
+                      //  Toast.makeText(Inicio.this, "Usuario correcto", Toast.LENGTH_SHORT).show();
+                        // Crear un Intent para iniciar la nueva Activity
+                        Intent intent = new Intent(Inicio.this, TablaActivity.class);
+                        // Iniciar la nueva Activity
+                        startActivity(intent);
                     } else {
                         Toast.makeText(Inicio.this, "Usuario incorrecto.", Toast.LENGTH_SHORT).show();
                     }

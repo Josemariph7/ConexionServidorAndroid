@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:versionCode="1"
     android:versionName="1.0">
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,15 +14,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EjemploConexionServidor"
         tools:targetApi="34">
+
+        <!-- Actividad de Inicio (Login) -->
         <activity
             android:name=".Inicio"
-            android:exported="true"
-            tools:ignore="IntentFilterExportedReceiver">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Segunda Actividad (Después del login) -->
+        <activity
+            android:name=".TablaActivity"
+            android:exported="true">
+            <!-- No se necesita intent-filter a menos que también se deba iniciar desde el lanzador -->
+        </activity>
+
     </application>
+
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
