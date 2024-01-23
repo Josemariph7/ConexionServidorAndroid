@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inicio">
+
+    <EditText
+        android:id="@+id/txtUsuario"
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:layout_x="118dp"
+        android:layout_y="208dp"
+        android:textSize="18sp"></EditText>
+
+    <TextView
+        android:id="@+id/lblUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_x="179dp"
+        android:layout_y="170dp"
+        android:text="User"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:id="@+id/lblContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="152dp"
+        android:layout_y="269dp"
+        android:text="Password"
+        android:textSize="20sp"></TextView>
+
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_x="115dp"
+        android:layout_y="316dp"
+        android:textSize="18sp"></EditText>
+
+    <Button
+        android:id="@+id/btnValidar"
+        android:layout_width="116dp"
+        android:layout_height="wrap_content"
+        android:layout_x="143dp"
+        android:layout_y="418dp"
+        android:text="Validar"></Button>
+
+</AbsoluteLayout>
