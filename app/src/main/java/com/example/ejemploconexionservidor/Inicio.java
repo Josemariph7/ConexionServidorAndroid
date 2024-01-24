@@ -43,7 +43,7 @@ public class Inicio extends Activity {
                 parametros.add("contrasena");
                 parametros.add(pass.getText().toString());
 
-                new PostDataTask(parametros).execute("http://192.168.56.1/ejemplo/login.php");
+                new PostDataTask(parametros).execute("http://192.168.240.160/ejemplo/login.php");
             }
         });
     }
