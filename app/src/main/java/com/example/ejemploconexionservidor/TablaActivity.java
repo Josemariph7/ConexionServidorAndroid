@@ -249,7 +249,7 @@ public class TablaActivity extends AppCompatActivity {
             HttpURLConnection conn = null;
 
             try {
-                URL url = new URL("http://tu_servidor.com/cambiar_contrasena.php");
+                URL url = new URL("http://192.168.240.160/ejemplo/cambiarPass.php");
                 conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("POST");
                 conn.setDoOutput(true);
@@ -288,6 +288,7 @@ public class TablaActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
             Toast.makeText(TablaActivity.this, result, Toast.LENGTH_LONG).show();
+            actualizarDatos();
         }
     }
 
