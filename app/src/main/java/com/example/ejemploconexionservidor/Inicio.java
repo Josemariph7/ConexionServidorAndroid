@@ -103,11 +103,7 @@ public class Inicio extends Activity {
                     int userId = userData.optInt("ID_USUARIO", -1);
                     String userName = userData.optString("USER", "No proporcionado");
                     if (userId > 0) {
-                        // Usuario correcto
-                      //  Toast.makeText(Inicio.this, "Usuario correcto", Toast.LENGTH_SHORT).show();
-                        // Crear un Intent para iniciar la nueva Activity
                         Intent intent = new Intent(Inicio.this, TablaActivity.class);
-                        // Iniciar la nueva Activity
                         startActivity(intent);
                     } else {
                         Toast.makeText(Inicio.this, "Usuario incorrecto.", Toast.LENGTH_SHORT).show();
